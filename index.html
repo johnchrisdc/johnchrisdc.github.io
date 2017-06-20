@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+       #map {
+        height: 100%;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 14.5428644, lng: 121.0371426}
+        });
+//120.945778
+        var imageBounds = {
+          north: 14.592953,
+          south: 14.485237,
+          east: 121.088268,
+          west: 120.947102
+        };
+
+        historicalOverlay = new google.maps.GroundOverlay(
+            'https://i.redd.it/q1ori319ym4z.jpg',
+            imageBounds);
+        historicalOverlay.setOpacity(0.8);
+        historicalOverlay.setMap(map);
+
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCNNfsTYiMJQadDF5-Rkt9PHhGVarTq8M&callback=initMap">
+    </script>
+  </body>
+</html>
