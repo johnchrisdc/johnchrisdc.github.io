@@ -1,45 +1,84 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-       #map {
-        height: 100%;
-        width: 100%;
-       }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.grey-red.min.css" />
+	<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
 
-    <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: {lat: 14.5428644, lng: 121.0371426}
-        });
-//120.945778
-        var imageBounds = {
-          north: 14.592953,
-          south: 14.485237,
-          east: 121.088268,
-          west: 120.947102
-        };
+	<link rel="icon" type="image/png" href="res/fav_ico.png">
 
-        historicalOverlay = new google.maps.GroundOverlay(
-            'https://i.redd.it/q1ori319ym4z.jpg',
-            imageBounds);
-        historicalOverlay.setOpacity(0.8);
-        historicalOverlay.setMap(map);
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCNNfsTYiMJQadDF5-Rkt9PHhGVarTq8M&callback=initMap">
-    </script>
-  </body>
+	<title>JCDC</title>
+
+	<style>
+		.demo-layout-transparent {
+		  background: white center / cover;
+		}
+		.demo-layout-transparent .mdl-layout__header,
+		.demo-layout-transparent .mdl-layout__drawer-button {
+		  color: black;
+		  background: white;
+		}
+		.demo-layout-transparent .mdl-layout__drawer {
+		  color: white;
+		  background: #424242;
+		  border-right: none;
+		}
+		#lol{
+		    font-weight: 500;
+		    letter-spacing: 8px;
+		    line-height: 30px;
+		    text-transform: uppercase;
+		}
+
+		#lolz{
+		    font-weight: 500;
+		    letter-spacing: 8px;
+		    line-height: 20px;
+		    text-transform: uppercase;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+	  <header class="mdl-layout__header mdl-layout__header" style="box-shadow:none;">
+	    <div class="mdl-layout__header-row">
+	      <!-- Title -->
+	      <span class="mdl-layout-title"><img src="res/jcdc_logo_normal.png" /></span>
+	      <!-- Add spacer, to align navigation to the right -->
+	      <div class="mdl-layout-spacer"></div>
+	    </div>
+	  </header>
+	  <div class="mdl-layout__drawer">
+	    <span class="mdl-layout-title">Hello World!</span>
+	    <nav class="mdl-navigation">
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://www.facebook.com/RadioActivePotatoProject">POTATOINC</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="http://forum.xda-developers.com/galaxy-y/development/rom-t2866838">POTATOCM</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://plus.google.com/communities/106151878353754544104/stream/a08126ed-7fd4-4768-a7e8-85c69c60934a">ALL PAPERS</a>
+	    </nav>
+
+	    <hr></hr>
+
+	    <nav class="mdl-navigation">
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://www.facebook.com/johnchrisdelacruz">FACEBOOK</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://plus.google.com/+JohnChrisDelaCruz69/posts">GOOGLE+</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://github.com/mariozawa">GITHUB</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="http://forum.xda-developers.com/member.php?u=4715592">XDA-DEVELOPERS</a>
+	    </nav>
+
+	  </div>
+	  <main class="mdl-layout__content">
+	  </main>
+	</div>
+
+	<div style="width:100%; position:absolute;
+	text-align:center;">
+		<br><br><br><br>
+		<img class="img-responsive" id="dp" src="res/dp.jpg" />
+		<h3 id="lol" > John Chris Dela Cruz </h3>
+		<h5 id="lolz" > Android developer extraordinaire. </h5>
+  	</div>
+
+</body>
 </html>
